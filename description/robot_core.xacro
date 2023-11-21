@@ -88,7 +88,7 @@
     <link name="caster_wheel">
         <visual>
             <geometry>
-                <sphere radius="0.85"/>
+                <sphere radius="0.05"/>
             </geometry>
             <material name="black"/>
         </visual>
