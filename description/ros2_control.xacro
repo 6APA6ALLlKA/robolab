@@ -33,7 +33,7 @@
 
     <gazebo>
         <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
-            <parameters>$(find robolab)/config/my_controllers.yaml</parameters>
+            <parameters>$~/robot_ws/src/robolab/config/my_controllers.yaml</parameters>
          
         </plugin>
     </gazebo>
