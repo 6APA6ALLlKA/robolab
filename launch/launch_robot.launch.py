@@ -28,14 +28,14 @@ def generate_launch_description():
                 )]), launch_arguments={'use_sim_time': 'false', 'use_ros2_control': 'true'}.items()
     )
 
-    robot_description = ParameterValue(Command(['ros2 param get --hide-type /robot_state_publisher robot_description']))
+    robot_description_ = ParameterValue(Command(['ros2 param get --hide-type /robot_state_publisher robot_description']), value_type=str)
 
     controller_params_file = os.path.join(get_package_share_directory(package_name),'config','my_controllers.yaml')
 
     controller_manager = Node(
         package="controller_manager",
         executable="ros2_control_node",
-        parameters=[{'robot_description': robot_description},
+        parameters=[{'robot_description': robot_description_},
                     controller_params_file]
     )
 
